@@ -1,15 +1,16 @@
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 
-
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>
-          <h1>github finder</h1>
-        </div>
-      </header>
-    </div>
+    <Router>
+      <div className="flex flex-col justify-between h-screen">
+        <Navbar/>
+        <main className="content">
+          <div className="mx-auto px-3 pb-12">Main Content</div></main>
+          <Footer />
+      </div>
+    </Router>
   );
 }
-
-export default App;
